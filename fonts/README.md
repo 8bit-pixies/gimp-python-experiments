@@ -1,0 +1,1 @@
+RedkostComic2 contains a fix for the apostrophe so that the spacing is improved (more details to come)
