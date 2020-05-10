@@ -2,13 +2,12 @@
 import os
 
 
-def xcf_to_jpg(fname, out_fname=""):
+def xcf_to_jpg_showall(fname, out_fname=""):
     """
     makes all layers visible, flattens the image and then exports as jpg
     """
     img = pdb.gimp_file_load(fname, fname)
 
-    """
     # do show all layers
     pdb.gimp_image_undo_group_start(img)
 
@@ -24,7 +23,6 @@ def xcf_to_jpg(fname, out_fname=""):
 
     pdb.gimp_image_undo_group_end(img)
     # end do show all layers
-    """
 
     img.flatten()
     if out_fname == "":

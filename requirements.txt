@@ -1,0 +1,6 @@
+black
+pytesseract
+opencv-python
+googletrans
+pandas
+nltk

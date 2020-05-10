@@ -2,7 +2,7 @@
 import os
 
 
-def jpg_to_xcf(fname):
+def jpg_to_xcf(fname, out_fname=""):
     """
     Converts a jpg file to xcf and saves it.
     Note that in this mode, the function name and the name of this file must match.
@@ -13,8 +13,9 @@ def jpg_to_xcf(fname):
     """
     img = pdb.gimp_file_load(fname, fname)
     drawable = img.active_drawable
-    basefname = os.path.splitext(fname)[0] + ".xcf"
-    pdb.gimp_xcf_save(0, img, drawable, basefname, basefname)
+    if out_fname == "":
+        out_fname = os.path.splitext(fname)[0] + ".xcf"
+    pdb.gimp_xcf_save(0, img, drawable, out_fname, out_fname)
     pdb.gimp_image_delete(img)
 
 
